@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de testes de acessibilidade">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Tela de login de anime">
+    <title>Any Animes</title>
+</head>
+
+<body>
+    <main>
+        <div class="container" aria-label="container">
+            <div class="banner-login"></div>
+            <div class="form-container">
+                <form>
+                    <h1>login</h1>
+                    <div class="form-group">
+                        <label for="email-address">Email</label>
+                        <input type="email" pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" title="Email incorreto" name="email" id="email-address" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password" placeholder="Senha" required title="A senha deve ter apenas letras e numeros e no minimo 8 caracteres" pattern="[a-zA-Z0-9]{8,}">
+                    </div>
+                    <div class="form-group forgot-pass">
+                        <a href="#">Esqueceu a senha ?</a>
+                    </div>
+                    <div class="form-group btn-login">
+                        <input type="submit" value="login">
+                    </div>
+                    <div class="form-group register">
+                        Não possui conta? <a href="#">Registrar-se</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@700&display=swap');
+
+/* DEFINIÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-body: #DCF0FF;
+    --light-color: #FFFFFF;
+    --light-black: #444444;
+    --border-color: #AAAAAA;
+    --background-btn: #EB3471;
+    --background-btn-hover: rgba(233, 34, 100, 0.878);
+}
+
+/* DEFINIÇÃO DO BODY */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-body);
+}
+
+/* CONTEUDO PRINCIPAL / LOGIN */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 600px;
+    height: 400px;
+    transition: 1s;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* BANNER LOGIN */
+
+.banner-login {
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: url('../img/banner-login.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* FORM LOGIN */
+
+form {
+    height: 100%;
+    background-color: var(--light-color);
+}
+
+form h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--light-black);
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.form-group {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    padding: 8px;
+    margin-top: 5px;
+    outline: none;
+    border: 1px solid var(--border-color);
+
+}
+
+input[type="submit"] {
+    color: var(--light-color);
+    text-transform: uppercase;
+    text-shadow: 0px 0px 1px var(--light-black);
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: var(--background-btn);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--background-btn-hover)
+}
+
+.forgot-pass {
+    text-align: end;
+    margin: 18px 0px;
+}
+
+.forgot-pass a,
+.register a {
+    color: var(--light-black);
+    text-decoration: none;
+    font-style: italic;
+}
+
+.forgot-pass a:hover,
+.register a:hover {
+    text-decoration: underline;
+}
+
+.register {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 45px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media(max-width: 769px) {
+    .container {
+        width: 508px;
+    }
+}
+
+@media(max-width: 520px) {
+    .container {
+        width: 90vw;
+        height: 85vh;
+        margin: 20px 0;
+        grid-template-columns: 1fr;
+    }
+
+    .banner-login {
+        height: 35vh;
+        border-radius: 5px;
+        background-position: bottom;
+    }
+
+    form h1 {
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .register {
+        padding-bottom: 15px;
+    }
+}
